@@ -1,13 +1,24 @@
-# Android Sample Project: Dagger Demo with RxJava and Retrofit
+# Dagger with RxJava and Retrofit (Android)
 
-## Overview
+Android sample that adds RxJava 2 and Retrofit to the Dagger 2 setup. It calls `GET /posts` on
+[JSONPlaceholder](https://jsonplaceholder.typicode.com) through an injected network module.
 
-This repository contains a simple Android application demonstrating the usage of Dagger for dependency injection with RxJava and Retrofit.
+This is an older sample kept for reference. It is not actively maintained.
 
-## Contributing
+## What it shows
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+- Dagger 2 components and modules, including a `NetworkModule` that builds the Retrofit client
+- Retrofit 2.3.0 with the RxJava 2 call adapter and the Moshi converter
+- A `PostApi` interface returning RxJava types, subscribed to with RxAndroid
+
+## Stack
+
+Java, Dagger 2.14.1, RxJava 2.1.9, RxAndroid 2.0.2, Retrofit 2.3.0, `minSdkVersion 15`, `compileSdkVersion 27`.
+
+## Run
+
+Open the project in Android Studio and run the `app` module. It uses an older Android Gradle plugin (3.1.x) and `compileSdkVersion 27`, so Android Studio may ask you to update the Gradle wrapper and plugin.
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+MIT. See [LICENSE](LICENSE).
